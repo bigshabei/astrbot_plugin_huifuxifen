@@ -1,0 +1,6 @@
+name: astrbot_plugin_huifuxifen
+desc: 主动回复管理插件，允许管理员设置和管理群聊及特定用户的回复概率。跟官版不建议同时开启
+help: 输入/开启主动回复启用插件，输入/关闭主动回复关闭插件，输入/主动回复帮助查看详细使用说明。
+version: v1.1.0
+author: 大沙北
+repo: https://github.com/bigshabei/astrbot_plugin_huifuxifen

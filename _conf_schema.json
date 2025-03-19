@@ -1,0 +1,54 @@
+{
+    "active_reply_rates": {
+        "description": "主动回复概率设置",
+        "type": "object",
+        "default": {},
+        "hint": "存储群聊和用户的回复概率设置",
+        "obvious_hint": true,
+        "items": {
+            "groups": {
+                "description": "群聊回复概率",
+                "type": "object",
+                "default": {},
+                "hint": "每个群聊的回复概率设置",
+                "items": {
+                    "*": {
+                        "type": "float",
+                        "description": "群聊的回复概率",
+                        "hint": "群聊ID作为键，值为回复概率",
+                        "default": 0.0
+                    }
+                }
+            },
+            "users": {
+                "description": "用户回复概率",
+                "type": "object",
+                "default": {},
+                "hint": "每个群聊中特定用户的回复概率设置",
+                "items": {
+                    "*": {
+                        "type": "object",
+                        "description": "群聊ID",
+                        "hint": "群聊ID作为键，值为用户ID和概率的字典",
+                        "default": {},
+                        "items": {
+                            "*": {
+                                "type": "float",
+                                "description": "用户的回复概率",
+                                "hint": "用户ID作为键，值为回复概率",
+                                "default": 0.0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "plugin_enabled": {
+        "description": "插件开关状态",
+        "type": "bool",
+        "default": true,
+        "hint": "控制插件是否启用",
+        "obvious_hint": true
+    }
+}
